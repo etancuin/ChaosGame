@@ -20,11 +20,11 @@ int main()
 
     while(true)
     {
-        if(vertices.size() == 0) 
+        if(vertices.size() == 1) 
             text.setString("Click to set first vertex.");
-        else if(vertices.size() == 1)
-            text.setString("Click to set second vertex.");
         else if(vertices.size() == 2)
+            text.setString("Click to set second vertex.");
+        else if(vertices.size() == 3)
             text.setString("Click to set third vertex.");
         else
             text.setString("Click to start simulation.");
