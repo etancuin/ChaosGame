@@ -5,13 +5,11 @@
 #include <SFML/Graphics.hpp>
 using namespace sf;
 
-/*  
-
-So I wrote a decent bit of the program but I haven't actually been able to test it since Mac sucks...hopefully it kinda works 
-
-Also, we might need to make it actually OOP and use some functions
+/* 
 
 We may also need to adjust the font, size and postion of the text
+
+Also, we might need to make it actually OOP and use some functions
 
 */
 
@@ -67,7 +65,7 @@ int main()
         window.draw(text);
         for(int i = 0; i < vertices.size(); i++)
         {
-            RectangleShape rectangle(Vector2f(2, 2));
+            RectangleShape rectangle(Vector2f(5, 5));
             rectangle.setPosition(vertices.at(i).first, vertices.at(i).second);
             window.draw(rectangle);
         }
@@ -77,11 +75,14 @@ int main()
     
     while(window.isOpen())
     {
-        text.setString("Click to exit simulation.");
+        //if we want fractal to go faster
+        //for(int i = 0; i < 1000; i++)
+        //{   
         int verticeIndex = rand() % 3;
         int pointIndex = points.size() - 1;
         points.push_back(std::make_pair((points.at(pointIndex).first + vertices.at(verticeIndex).first) / 2, 
                           (points.at(pointIndex).second + vertices.at(verticeIndex).second) / 2));
+        //}
         
         Event event;
         while(window.pollEvent(event))
@@ -93,16 +94,17 @@ int main()
         }
         
         window.clear();
+        text.setString("Click to exit simulation.");
         window.draw(text);
         for(int i = 0; i < vertices.size(); i++)
         {
-            RectangleShape rectangle(Vector2f(2, 2));
+            RectangleShape rectangle(Vector2f(5, 5));
             rectangle.setPosition(vertices.at(i).first, vertices.at(i).second);
             window.draw(rectangle);
         }
         for(int i = 0; i < points.size(); i++)
         {
-            RectangleShape rectangle(Vector2f(2, 2));
+            RectangleShape rectangle(Vector2f(1, 1));
             rectangle.setPosition(points.at(i).first, points.at(i).second);
             window.draw(rectangle);
         }
