@@ -2,7 +2,7 @@
 
 #include <utility>
 #include <cstdlib>
-#include <SMFL/Graphics.hpp>
+#include <SFML/Graphics.hpp>
 using namespace sf;
 
 /*  
