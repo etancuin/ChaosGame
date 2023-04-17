@@ -1,7 +1,7 @@
 //Ethan and Chris
 
 #include <utility>
-#include <csdlib>
+#include <cstdlib>
 #include <SMFL/Graphics.hpp>
 using namespace sf;
 
