@@ -46,7 +46,7 @@ int main()
         {
             if(event.type == Event::MouseButtonPressed)
             {
-                if(vertices.size() == 4)
+                if(vertices.size() == 3)
                 {
                     points.push_back({event.mouseButton.x, event.mouseButton.y});
                     input = false;
