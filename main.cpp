@@ -92,6 +92,7 @@ int main()
             }
         }
         
+        window.clear();
         window.draw(text);
         for(int i = 0; i < vertices.size(); i++)
         {
