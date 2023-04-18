@@ -44,7 +44,6 @@ void Chaos_Game::input(sf::RenderWindow& window, sf::Text& text)
         }
         window.display();
     }
-    std::cout << vertices.size() << std::endl;
 }
 void Chaos_Game::print(sf::RenderWindow& window, sf::Text& text)
 {
