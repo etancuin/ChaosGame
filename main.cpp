@@ -1,4 +1,4 @@
-//Ethan and Chris
+//Ethan Quinn and Chris Reinholtz
 
 #include <utility>
 #include <cstdlib>
@@ -15,6 +15,7 @@ Also, we might need to make it actually OOP and use some functions
 
 int main()
 {
+    // draw screen
     VideoMode vm(1920, 1080);
     RenderWindow window(vm, "Chaos Game", Style::Fullscreen);
     std::vector<std::pair<int, int>> vertices;
