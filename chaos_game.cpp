@@ -2,6 +2,13 @@
 
 void Chaos_Game::input(sf::RenderWindow& window, sf::Text& text)
 {
+    
+    /*
+    
+    maybe add some code to make sure that the user inputs a number greater than or equal to 3 vertices
+    
+    */
+    
     bool input = true;
     std::cout << "Enter number of vertices." << std::endl;
     std::cin >> num_vertex;
