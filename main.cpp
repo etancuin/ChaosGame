@@ -1,4 +1,4 @@
-//Ethan and Chris
+//Ethan Quinn and Chris Reinholtz
 
 #include "chaos_game.h"
 
