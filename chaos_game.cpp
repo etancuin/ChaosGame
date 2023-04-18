@@ -2,16 +2,11 @@
 
 void Chaos_Game::input(sf::RenderWindow& window, sf::Text& text)
 {
-    
-    /*
-    
-    maybe add some code to make sure that the user inputs a number greater than or equal to 3 vertices
-    
-    */
-    
     bool input = true;
     std::cout << "Enter number of vertices." << std::endl;
-    std::cin >> num_vertex;
+    do
+        std::cin >> num_vertex;
+    while(num_vertex < 3);
     last_vertex = rand() % num_vertex;
     while(input && window.isOpen())
     {
@@ -64,15 +59,13 @@ void Chaos_Game::print(sf::RenderWindow& window, sf::Text& text)
             else
             {
                 do
-                {
                     verticeIndex =  rand() % num_vertex;
-                }
                 while(verticeIndex == last_vertex);
                 last_vertex = verticeIndex;
             }
             int pointIndex = points.size() - 1;
             points.push_back(std::make_pair((points.at(pointIndex).first + vertices.at(verticeIndex).first) / 2, 
-                            (points.at(pointIndex).second + vertices.at(verticeIndex).second) / 2));
+                (points.at(pointIndex).second + vertices.at(verticeIndex).second) / 2));
         }
         
         sf::Event event;
@@ -93,10 +86,12 @@ void Chaos_Game::print(sf::RenderWindow& window, sf::Text& text)
             rectangle.setPosition(vertices.at(i).first, vertices.at(i).second);
             window.draw(rectangle);
         }
+        sf::Color color(rand() % 255, rand() % 255, rand() % 255, 255);
         for(int i = 0; i < points.size(); i++)
         {
             sf::RectangleShape rectangle(sf::Vector2f(1, 1));
             rectangle.setPosition(points.at(i).first, points.at(i).second);
+            rectangle.setFillColor(color);
             window.draw(rectangle);
         }
         window.display();
