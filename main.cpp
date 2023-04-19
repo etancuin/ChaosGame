@@ -2,14 +2,6 @@
 
 #include "chaos_game.h"
 
-/* 
-
-We may also need to adjust the font, size and postion of the text
-
-Also, we might need to make it actually OOP and use some functions
-
-*/
-
 int main()
 {
     sf::VideoMode vm(1920, 1080);
